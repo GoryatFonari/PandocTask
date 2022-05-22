@@ -19,3 +19,6 @@ def headerRepetitionMessage(elem):
             sys.stderr.write("Exchange headers, repetition detected." + stringify(elem))
         else:
             headers.append(stringify(elem))
+
+if __name__ == "__main__":
+    run_filters([headerRepetitionMessage, headChanger], prepare=projectWord)
